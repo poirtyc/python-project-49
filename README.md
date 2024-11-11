@@ -15,9 +15,9 @@ The project has 5 games:
 - brain-prime
 
 ### How to install:
-1. Install Python: Make sure you have Python 3.10 or later installed on your computer.\
+1. Install Python: Make sure you have Python 3.10 or later installed on your computer.
 
-You can download it from the official [Python website](https://www.python.org/downloads/).\
+You can download it from the official [Python website](https://www.python.org/downloads/).
 
 2. Install Poetry: This project uses Poetry to manage dependencies
 
@@ -45,30 +45,30 @@ To play a specific game, use one of the following commands in the terminal:\
 	•	brain-calc: python -m brain_games.scripts.brain_calc\
 	•	brain-gcd: python -m brain_games.scripts.brain_gcd\
 	•	brain-progression: python -m brain_games.scripts.brain_progression\
-	•	brain-prime: python -m brain_games.scripts.brain_prime\
+	•	brain-prime: python -m brain_games.scripts.brain_prime
 
-Alternatively, you can configure entry points in the pyproject.toml file to make these commands available directly as:\
+Alternatively, you can configure entry points in the pyproject.toml file to make these commands available directly as:
 
 brain-even\
 brain-calc\
 brain-gcd\
 brain-progression\
-brain-prime\
+brain-prime
 
-To enable this, add the following under [tool.poetry.scripts] in your pyproject.toml:\
+To enable this, add the following under [tool.poetry.scripts] in your pyproject.toml:
 
 [tool.poetry.scripts]\
 brain-even = "brain_games.scripts.brain_even:main"\
 brain-calc = "brain_games.scripts.brain_calc:main"\
 brain-gcd = "brain_games.scripts.brain_gcd:main"\
 brain-progression = "brain_games.scripts.brain_progression:main"\
-brain-prime = "brain_games.scripts.brain_prime:main"\
+brain-prime = "brain_games.scripts.brain_prime:main"
 
-After configuring the scripts, install the project as a package:\
+After configuring the scripts, install the project as a package:
 
-poetry install\
+poetry install
 
-Now, you can run each game directly by its name (e.g., brain-even, brain-calc, etc.).\
+Now, you can run each game directly by its name (e.g., brain-even, brain-calc, etc.).
 
 ### How to use:
 Write the name of the game in the command line:\
