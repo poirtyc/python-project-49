@@ -16,22 +16,28 @@ The project has 5 games:
 
 ### How to install:
 1. Install Python: Make sure you have Python 3.10 or later installed on your computer.\
+
 You can download it from the official [Python website](https://www.python.org/downloads/).\
 
 2. Install Poetry: This project uses Poetry to manage dependencies
+
 Install Poetry by running
 
 3. Than write name game in comand line (Example `brain-even` or `brain-calc`)
+
 curl -sSL https://install.python-poetry.org | python3 -
 
 4. Open a terminal and clone the project repository from GitHub:
+
 git clone https://github.com/yourusername/python-project-49.git
 cd python-project-49
 
 5.Once inside the project folder, install the dependencies:
+
 poetry install
 
-5. After installation, activate the virtual environment provided by Poetry:
+6. After installation, activate the virtual environment provided by Poetry:
+
 poetry shell
 
 To play a specific game, use one of the following commands in the terminal:
