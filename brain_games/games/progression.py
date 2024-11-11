@@ -18,11 +18,12 @@ def get_progression():
 
 def generate_round():
     progression = get_progression()
-    number_string = " ".join(map(str, progression))
-    random_number_in_progression = str(progression[utils.get_random_number(1, 10)])
+    random_index = utils.get_random_number(0, 9)
+    original_value = progression[random_index]
+    progression[random_index] = '..'
 
-    question = number_string.replace(random_number_in_progression, '..')
-    answer = random_number_in_progression
+    question = ' '.join(map(str, progression))
+    answer = str(original_value)
     return question, answer
 
 
