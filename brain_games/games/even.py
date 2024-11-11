@@ -1,8 +1,4 @@
-import random
-
-
-def get_random_number():
-    return random.randint(1, 100)
+from brain_games import utils
 
 
 def is_even(number):
@@ -10,7 +6,7 @@ def is_even(number):
 
 
 def generate_round():
-    question = get_random_number()
+    question = utils.get_random_number(1, 100)
     answer = 'yes' if is_even(question) else 'no'
     return question, answer
 
