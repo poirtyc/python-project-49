@@ -15,13 +15,53 @@ The project has 5 games:
 - brain-prime
 
 ### How to install:
-1. Install Node.js: Make sure you have Node.js installed on your computer.\
-You can download it from the official Node.js website and follow the\
-installation instructions for your operating system.
+1. Install Python: Make sure you have Python 3.10 or later installed on your computer.\
+You can download it from the official [Python website](https://www.python.org/downloads/).\
 
-2. Than open comand line and write `npm install -g '__game_name__'` (Exapmle: `npm install -g brain-even` )
+2. Install Poetry: This project uses Poetry to manage dependencies
+Install Poetry by running
 
 3. Than write name game in comand line (Example `brain-even` or `brain-calc`)
+curl -sSL https://install.python-poetry.org | python3 -
+
+4. Open a terminal and clone the project repository from GitHub:
+git clone https://github.com/yourusername/python-project-49.git
+cd python-project-49
+
+5.Once inside the project folder, install the dependencies:
+poetry install
+
+5. After installation, activate the virtual environment provided by Poetry:
+poetry shell
+
+To play a specific game, use one of the following commands in the terminal:
+	•	brain-even: python -m brain_games.scripts.brain_even
+	•	brain-calc: python -m brain_games.scripts.brain_calc
+	•	brain-gcd: python -m brain_games.scripts.brain_gcd
+	•	brain-progression: python -m brain_games.scripts.brain_progression
+	•	brain-prime: python -m brain_games.scripts.brain_prime
+
+Alternatively, you can configure entry points in the pyproject.toml file to make these commands available directly as:
+
+brain-even
+brain-calc
+brain-gcd
+brain-progression
+brain-prime
+
+To enable this, add the following under [tool.poetry.scripts] in your pyproject.toml:
+
+[tool.poetry.scripts]
+brain-even = "brain_games.scripts.brain_even:main"
+brain-calc = "brain_games.scripts.brain_calc:main"
+brain-gcd = "brain_games.scripts.brain_gcd:main"
+brain-progression = "brain_games.scripts.brain_progression:main"
+brain-prime = "brain_games.scripts.brain_prime:main"
+
+After configuring the scripts, install the project as a package:
+poetry install
+
+Now, you can run each game directly by its name (e.g., brain-even, brain-calc, etc.).
 
 ### How to use:
 Write the name of the game in the command line:\
