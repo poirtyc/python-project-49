@@ -16,7 +16,8 @@ def general_logic(rules, generate_round):
         if user_answer == answer:
             print('Correct!')
         else:
-            print(f'{user_answer} is wrong answer ;(. Correct answer was {answer}.')
+            print(f"{user_answer} is wrong answer ;(. "
+                  f"Correct answer was {answer}.")
             print(f"Let's try again, {player_name}!")
             return
         rounds_count -= 1
