@@ -40,34 +40,35 @@ poetry install
 
 poetry shell
 
-To play a specific game, use one of the following commands in the terminal:
-	•	brain-even: python -m brain_games.scripts.brain_even
-	•	brain-calc: python -m brain_games.scripts.brain_calc
-	•	brain-gcd: python -m brain_games.scripts.brain_gcd
-	•	brain-progression: python -m brain_games.scripts.brain_progression
-	•	brain-prime: python -m brain_games.scripts.brain_prime
+To play a specific game, use one of the following commands in the terminal:\
+	•	brain-even: python -m brain_games.scripts.brain_even\
+	•	brain-calc: python -m brain_games.scripts.brain_calc\
+	•	brain-gcd: python -m brain_games.scripts.brain_gcd\
+	•	brain-progression: python -m brain_games.scripts.brain_progression\
+	•	brain-prime: python -m brain_games.scripts.brain_prime\
 
-Alternatively, you can configure entry points in the pyproject.toml file to make these commands available directly as:
+Alternatively, you can configure entry points in the pyproject.toml file to make these commands available directly as:\
 
-brain-even
-brain-calc
-brain-gcd
-brain-progression
-brain-prime
+brain-even\
+brain-calc\
+brain-gcd\
+brain-progression\
+brain-prime\
 
-To enable this, add the following under [tool.poetry.scripts] in your pyproject.toml:
+To enable this, add the following under [tool.poetry.scripts] in your pyproject.toml:\
 
-[tool.poetry.scripts]
-brain-even = "brain_games.scripts.brain_even:main"
-brain-calc = "brain_games.scripts.brain_calc:main"
-brain-gcd = "brain_games.scripts.brain_gcd:main"
-brain-progression = "brain_games.scripts.brain_progression:main"
-brain-prime = "brain_games.scripts.brain_prime:main"
+[tool.poetry.scripts]\
+brain-even = "brain_games.scripts.brain_even:main"\
+brain-calc = "brain_games.scripts.brain_calc:main"\
+brain-gcd = "brain_games.scripts.brain_gcd:main"\
+brain-progression = "brain_games.scripts.brain_progression:main"\
+brain-prime = "brain_games.scripts.brain_prime:main"\
 
-After configuring the scripts, install the project as a package:
-poetry install
+After configuring the scripts, install the project as a package:\
 
-Now, you can run each game directly by its name (e.g., brain-even, brain-calc, etc.).
+poetry install\
+
+Now, you can run each game directly by its name (e.g., brain-even, brain-calc, etc.).\
 
 ### How to use:
 Write the name of the game in the command line:\
