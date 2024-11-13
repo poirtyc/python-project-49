@@ -1,33 +1,26 @@
-from brain_games import utils
+import random
 
 
-operators = {
-    1: '+',
-    2: '-',
-    3: '*',
-    4: '/',
-}
+OPERATORS = ('+', '-', '*')
 
 
-def calculate(first_operand, second_operand, random_operator):
+def calculate(FIRST_OPERAND, SECOND_OPERAND, random_operator):
     match random_operator:
         case '+':
-            return first_operand + second_operand
+            return FIRST_OPERAND + SECOND_OPERAND
         case '-':
-            return first_operand - second_operand
+            return FIRST_OPERAND - SECOND_OPERAND
         case '*':
-            return first_operand * second_operand
-        case '/':
-            return first_operand / second_operand
+            return FIRST_OPERAND * SECOND_OPERAND
 
 
 def generate_round():
-    first_operand = utils.get_random_number(1, 100)
-    second_operand = utils.get_random_number(1, 100)
-    random_operator = operators[utils.get_random_number(1, 3)]
-    question = f'{first_operand} {random_operator} {second_operand}'
-    answer = str(int(calculate(first_operand, second_operand, random_operator)))
+    FIRST_OPERAND = random.randint(1, 100)
+    SECOND_OPERAND = random.randint(1, 100)
+    random_operator = OPERATORS[random.randint(0, 2)]
+    question = f'{FIRST_OPERAND} {random_operator} {SECOND_OPERAND}'
+    answer = str(int(calculate(FIRST_OPERAND, SECOND_OPERAND, random_operator)))
     return question, answer
 
 
-rules = 'What is the result of the expression?'
+RULES = 'What is the result of the expression?'

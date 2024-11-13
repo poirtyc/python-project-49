@@ -4,7 +4,7 @@ from brain_games.games import even
 
 
 def main():
-    general_logic(even.rules, even.generate_round)
+    general_logic(even.RULES, even.generate_round)
 
 
 if __name__ == '__main__':

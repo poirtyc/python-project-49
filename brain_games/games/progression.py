@@ -1,30 +1,25 @@
-from brain_games import utils
+import random
 
 
-def get_progression():
+def get_progression(start, step, length_progression=10):
     progression = []
-    progression_num = utils.get_random_number(1, 4)
-
-    progression_lenght = 10
-    drive = progression_num
-
-    while progression_lenght > 0:
-        progression.append(drive)
-        drive += progression_num
-        progression_lenght -= 1
-
+    for i in range(length_progression):
+        progression.append(start + i * step)
     return progression
 
 
 def generate_round():
-    progression = get_progression()
-    random_index = utils.get_random_number(0, 9)
-    original_value = progression[random_index]
+    START_PROGRESSION = random.randint(1, 3)
+    STEP_PROGRESSION = random.randint(1, 4)
+    progression = get_progression(START_PROGRESSION, STEP_PROGRESSION)
+
+    random_index = random.randint(1, 10)
+    original_value_from_progression = progression[random_index]
     progression[random_index] = '..'
 
     question = ' '.join(map(str, progression))
-    answer = str(original_value)
+    answer = str(original_value_from_progression)
     return question, answer
 
 
-rules = 'What number is missing in the progression?'
+RULES = 'What number is missing in the progression?'

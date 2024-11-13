@@ -4,7 +4,7 @@ from brain_games.games import calc
 
 
 def main():
-    general_logic(calc.rules, calc.generate_round)
+    general_logic(calc.RULES, calc.generate_round)
 
 
 if __name__ == '__main__':

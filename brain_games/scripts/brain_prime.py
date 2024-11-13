@@ -4,7 +4,7 @@ from brain_games.games import prime
 
 
 def main():
-    general_logic(prime.rules, prime.generate_round)
+    general_logic(prime.RULES, prime.generate_round)
 
 
 if __name__ == ('main'):

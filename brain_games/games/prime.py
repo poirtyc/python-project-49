@@ -1,4 +1,4 @@
-from brain_games.utils import get_random_number
+import random
 
 
 def is_prime(n):
@@ -14,9 +14,9 @@ def is_prime(n):
 
 
 def generate_round():
-    question = get_random_number(1, 100)
+    question = random.randint(1, 100)
     answer = 'yes' if is_prime(question) else 'no'
     return question, answer
 
 
-rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'

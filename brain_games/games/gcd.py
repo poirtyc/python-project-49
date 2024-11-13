@@ -1,22 +1,21 @@
-from brain_games import utils
+import random
 
 
-def get_gcd(first_num, second_num):
-
-    while first_num != second_num:
-        if first_num > second_num:
-            first_num = first_num - second_num
+def get_gcd(FIRST_NUMBER, SECOND_NUMBER):
+    while FIRST_NUMBER != SECOND_NUMBER:
+        if FIRST_NUMBER > SECOND_NUMBER:
+            FIRST_NUMBER = FIRST_NUMBER - SECOND_NUMBER
         else:
-            second_num = second_num - first_num
-    return first_num
+            SECOND_NUMBER = SECOND_NUMBER - FIRST_NUMBER
+    return FIRST_NUMBER
 
 
 def generate_round():
-    first_num = utils.get_random_number(1, 10)
-    second_num = utils.get_random_number(1, 10)
-    question = f'{first_num} {second_num}'
-    answer = str(get_gcd(first_num, second_num))
+    FIRST_NUMBER = random.randint(1, 10)
+    SECOND_NUMBER = random.randint(1, 10)
+    question = f'{FIRST_NUMBER} {SECOND_NUMBER}'
+    answer = str(get_gcd(FIRST_NUMBER, SECOND_NUMBER))
     return question, answer
 
 
-rules = 'Find the greatest common divisor of given numbers.'
+RULES = 'Find the greatest common divisor of given numbers.'
