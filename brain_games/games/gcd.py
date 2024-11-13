@@ -1,13 +1,13 @@
 import random
 
 
-def get_gcd(FIRST_NUMBER, SECOND_NUMBER):
-    while FIRST_NUMBER != SECOND_NUMBER:
-        if FIRST_NUMBER > SECOND_NUMBER:
-            FIRST_NUMBER = FIRST_NUMBER - SECOND_NUMBER
+def get_gcd(first_number, second_number):
+    while first_number != second_number:
+        if first_number > second_number:
+            first_number = first_number - second_number
         else:
-            SECOND_NUMBER = SECOND_NUMBER - FIRST_NUMBER
-    return FIRST_NUMBER
+            second_number = second_number - first_number
+    return first_number
 
 
 def generate_round():
