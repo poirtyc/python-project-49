@@ -13,7 +13,7 @@ def generate_round():
     STEP_PROGRESSION = random.randint(1, 4)
     progression = get_progression(START_PROGRESSION, STEP_PROGRESSION)
 
-    random_index = random.randint(1, 10)
+    random_index = random.randint(0, 9)
     original_value_from_progression = progression[random_index]
     progression[random_index] = '..'
 
