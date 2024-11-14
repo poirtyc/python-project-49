@@ -12,12 +12,11 @@ def general_logic(RULES, generate_round):
         print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')
 
-        if user_answer == answer:
-            print('Correct!')
-        else:
+        if user_answer != answer:
             print(f"{user_answer} is wrong answer ;(. "
                   f"Correct answer was {answer}.")
             print(f"Let's try again, {player_name}!")
             return
+        print("Correct!")
 
     print(f'Congratulations, {player_name}!')

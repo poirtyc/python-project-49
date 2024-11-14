@@ -2,24 +2,26 @@ import random
 
 
 OPERATORS = ('+', '-', '*')
+MIN_RANDOM_NUMBER = 1
+MAX_RANDOM_NUMBER = 100
 
 
-def calculate(FIRST_OPERAND, SECOND_OPERAND, random_operator):
+def calculate(first_operand, second_operand, random_operator):
     match random_operator:
         case '+':
-            return FIRST_OPERAND + SECOND_OPERAND
+            return first_operand + second_operand
         case '-':
-            return FIRST_OPERAND - SECOND_OPERAND
+            return first_operand - second_operand
         case '*':
-            return FIRST_OPERAND * SECOND_OPERAND
+            return first_operand * second_operand
 
 
 def generate_round():
-    FIRST_OPERAND = random.randint(1, 100)
-    SECOND_OPERAND = random.randint(1, 100)
+    first_operand = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
+    second_operand = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     random_operator = OPERATORS[random.randint(0, 2)]
-    question = f'{FIRST_OPERAND} {random_operator} {SECOND_OPERAND}'
-    answer = str(int(calculate(FIRST_OPERAND, SECOND_OPERAND, random_operator)))
+    question = f'{first_operand} {random_operator} {second_operand}'
+    answer = str(int(calculate(first_operand, second_operand, random_operator)))
     return question, answer
 
 

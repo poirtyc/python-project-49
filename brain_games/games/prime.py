@@ -1,5 +1,8 @@
 import random
 
+MIN_RANDOM_NUMBER = 1
+MAX_RANDOM_NUMBER = 100
+
 
 def is_prime(n):
     if n < 2:
@@ -14,7 +17,7 @@ def is_prime(n):
 
 
 def generate_round():
-    question = random.randint(1, 100)
+    question = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     answer = 'yes' if is_prime(question) else 'no'
     return question, answer
 

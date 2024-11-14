@@ -1,5 +1,8 @@
 import random
 
+MIN_RANDOM_NUMBER = 1
+MAX_RANDOM_NUMBER = 10
+
 
 def get_gcd(first_number, second_number):
     while first_number != second_number:
@@ -11,10 +14,10 @@ def get_gcd(first_number, second_number):
 
 
 def generate_round():
-    FIRST_NUMBER = random.randint(1, 10)
-    SECOND_NUMBER = random.randint(1, 10)
-    question = f'{FIRST_NUMBER} {SECOND_NUMBER}'
-    answer = str(get_gcd(FIRST_NUMBER, SECOND_NUMBER))
+    first_number = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
+    second_number = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
+    question = f'{first_number} {second_number}'
+    answer = str(get_gcd(first_number, second_number))
     return question, answer
 
 

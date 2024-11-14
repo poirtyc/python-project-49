@@ -1,5 +1,8 @@
 import random
 
+MIN_RANDOM_NUMBER = 1
+MAX_RANDOM_NUMBER = 9
+
 
 def get_progression(start, step, length_progression=10):
     progression = []
@@ -9,11 +12,11 @@ def get_progression(start, step, length_progression=10):
 
 
 def generate_round():
-    START_PROGRESSION = random.randint(1, 3)
-    STEP_PROGRESSION = random.randint(1, 4)
-    progression = get_progression(START_PROGRESSION, STEP_PROGRESSION)
+    start_progression = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
+    step_progression = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
+    progression = get_progression(start_progression, step_progression)
 
-    random_index = random.randint(0, 9)
+    random_index = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     original_value_from_progression = progression[random_index]
     progression[random_index] = '..'
 
