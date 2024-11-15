@@ -8,7 +8,7 @@ def general_logic(RULES, generate_round):
     print(RULES)
 
     diversity_rounds = 3
-    
+
     for _ in range(diversity_rounds):
         question, answer = generate_round()
         print(f'Question: {question}')
