@@ -7,7 +7,9 @@ def general_logic(RULES, generate_round):
     player_name = welcome_user()
     print(RULES)
 
-    for _ in range(3):
+    diversity_rounds = 3
+    
+    for _ in range(diversity_rounds):
         question, answer = generate_round()
         print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')
