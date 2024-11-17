@@ -11,17 +11,27 @@ def get_progression(start, step, length_progression=10):
     return progression
 
 
-def generate_round():
+def generate_random_progression():
     start_progression = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     step_progression = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     progression = get_progression(start_progression, step_progression)
+    return progression
 
-    random_index = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
-    original_value_from_progression = progression[random_index]
+
+def create_progression_with_missing(progression):
+    random_index = random.randint(0, len(progression) - 1)
+    original_value = progression[random_index]
     progression[random_index] = '..'
+    return progression, original_value
 
-    question = ' '.join(map(str, progression))
-    answer = str(original_value_from_progression)
+
+def generate_round():
+    progression = generate_random_progression()
+    progression_with_missing, original_value = (
+        create_progression_with_missing(progression)
+    )
+    question = ' '.join(map(str, progression_with_missing))
+    answer = str(original_value)
     return question, answer
 
 

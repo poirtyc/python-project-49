@@ -8,8 +8,12 @@ def is_even(number):
     return number % 2 == 0
 
 
+def generate_number():
+    return random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
+
+
 def generate_round():
-    question = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
+    question = generate_number()
     answer = 'yes' if is_even(question) else 'no'
     return question, answer
 

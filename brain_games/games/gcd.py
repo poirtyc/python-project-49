@@ -13,9 +13,14 @@ def get_gcd(first_number, second_number):
     return first_number
 
 
-def generate_round():
+def generate_numbers():
     first_number = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
     second_number = random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER)
+    return first_number, second_number
+
+
+def generate_round():
+    first_number, second_number = generate_numbers()
     question = f'{first_number} {second_number}'
     answer = str(get_gcd(first_number, second_number))
     return question, answer
